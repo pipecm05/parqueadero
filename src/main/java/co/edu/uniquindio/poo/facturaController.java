@@ -22,7 +22,8 @@ public class facturaController {
     public void recibir_infoMotos(String nombre , String cedula , TipoMoto tipo , String velocidad 
     , String placa , String modelo){
 
-      
+      label_nombre.setText(nombre);
+      label_nombre.visibleProperty();
       
   }
     

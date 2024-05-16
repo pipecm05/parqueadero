@@ -45,7 +45,6 @@ public class PrimaryController {
          tarifaMotoHibrida = Double.parseDouble(txt_tarifa_motoHibrida.getText());
          tarifaCarro = Double.parseDouble(txt_tarifaCarro.getText());
 
-        
         s2.recibir_tarifas(tarifaMotoClasica, tarifaMotoHibrida, tarifaCarro );
 
         filas = Integer.parseInt(txt_filas.getText());
@@ -55,4 +54,7 @@ public class PrimaryController {
     }
 
 
+
+
+    
 }

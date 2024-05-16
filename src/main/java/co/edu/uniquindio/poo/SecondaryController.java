@@ -12,14 +12,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
 
 //investiguen esta implementacion "initializable"
 public class SecondaryController implements Initializable {
 
     double tarifaMotoClasica ;
     double tarifaMotoHibrida ;
-    double tarifaCarro ;
+    double tarifaCarro;
+    int tiempoDeUso;
+
 
     @FXML
     private Button boton_registrar;
@@ -28,7 +29,7 @@ public class SecondaryController implements Initializable {
     private ComboBox<TipoMoto> combo_tipoMoto;
 
     @FXML
-    private ComboBox<TipoVehiculo> combo_tipoVehiculo;
+    private ComboBox<Vehiculo> combo_tipoVehiculo;
 
     @FXML
     private TextField txt_cedula;
@@ -61,31 +62,17 @@ public class SecondaryController implements Initializable {
     //METODO PARA RECIBIR LAS 3 TARIFAS DE PRIMARYCONTROLLER
     public void recibir_tarifas(double t1 , double t2 ,double t3){
 
-        tarifaMotoClasica = t1;
-        tarifaMotoHibrida = t2;
-        tarifaCarro = t3;
-    
+       this.tarifaMotoClasica = t1;
+       this.tarifaMotoHibrida = t2;
+       this.tarifaCarro = t3;
+
+
         System.out.println(tarifaMotoClasica);
         System.out.println(tarifaMotoHibrida);
         System.out.println(tarifaCarro);
 
         
     }
-
-    /*public void calculartotal(int tiempouso , TipoMoto tipo){
-
-        double total;
-        if(tipo.equals("CLASICA")){
-                total = tiempouso * tarifaMotoClasica;
-        }else{
-            total = tiempouso * tarifaMotoHibrida;
-        }
-
-        System.out.println(total);
-    }*/
-
-   
-    
 
 
     @FXML
@@ -103,9 +90,7 @@ public class SecondaryController implements Initializable {
 
         Moto m1 = new Moto(placa, modeloVehiculo, p1, velocidaMaxima);
 
-        int tiempoDeUso = Integer.parseInt(txt_tiempoDeUso.getText());
-
-        
+        tiempoDeUso = Integer.parseInt(txt_tiempoDeUso.getText());
 
         System.out.println(nombre);
         System.out.println(cedula);
@@ -117,8 +102,7 @@ public class SecondaryController implements Initializable {
         
 
     }
-
-
+ 
     @FXML
     void acccion_registrarCarro(ActionEvent event) throws IOException {
 
@@ -155,7 +139,5 @@ public class SecondaryController implements Initializable {
         ObservableList<TipoMoto> list = FXCollections.observableArrayList(TipoMoto.values());
         combo_tipoMoto.setItems(list);
     }
-
-    
 
 }

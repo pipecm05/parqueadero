@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo;
 
-public class Moto extends TipoVehiculo {
+public class Moto extends Vehiculo {
     private int velocidadMaxima;
 
     public Moto(String placa, String modelo, Propietario propietario, int velocidadMaxima) {

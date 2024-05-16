@@ -5,9 +5,9 @@ import java.util.Collection;
 public class Propietario {
     private String nombre;
     private String identificacion;
-    private Collection <TipoVehiculo> vehiculos;
+    private Collection <Vehiculo> vehiculos;
     
-    public Propietario(String nombre, String identificacion, Collection<TipoVehiculo> vehiculos) {
+    public Propietario(String nombre, String identificacion, Collection<Vehiculo> vehiculos) {
         this.nombre = nombre;
         this.identificacion = identificacion;
         this.vehiculos = vehiculos;
@@ -24,10 +24,10 @@ public class Propietario {
     public void setIdentificacion(String identificacion) {
         this.identificacion = identificacion;
     }
-    public Collection<TipoVehiculo> getVehiculos() {
+    public Collection<Vehiculo> getVehiculos() {
         return vehiculos;
     }
-    public void setVehiculos(Collection<TipoVehiculo> vehiculos) {
+    public void setVehiculos(Collection<Vehiculo> vehiculos) {
         this.vehiculos = vehiculos;
     }
     @Override

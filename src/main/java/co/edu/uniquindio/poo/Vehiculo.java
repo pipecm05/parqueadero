@@ -1,12 +1,11 @@
 package co.edu.uniquindio.poo;
 
-public abstract class TipoVehiculo {
+public abstract class Vehiculo {
     private String placa;
     private String modelo;
-    
     private Propietario propietario;
     
-    public TipoVehiculo(String placa, String modelo, Propietario propietario) {
+    public Vehiculo(String placa, String modelo, Propietario propietario) {
         this.placa = placa;
         this.modelo = modelo;
         this.propietario = propietario;
